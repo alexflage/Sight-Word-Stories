@@ -1,0 +1,125 @@
+/* SET 7 (PINK): sh, ch, th, wh, ck */
+Object.assign(BOOKS, {
+  "7-1": { t: "The Shell", cover: 2, pages: [
+    ["We are at the beach. A ship is far out.", "beach; boat 300 y150 s.5 #3b82f6; L 100 y238; E 180 y238 point"],
+    ["Emerson looks in the sand. She finds a shell!", "beach; E 200 y238 hold:shell hs:.8 big s1.2"],
+    ["It is pink. It has a shine.", "beach; spark; shell 200 s4 y240"],
+    ["Olivia finds a shell, too. Hers is white.", "beach; O 200 y238 hold:shell hc:#fff hs:.8"],
+    ["Lauren finds a shell with a crab in it!", "beach; L 140 y238 wow; crab 270 y242 s1.4"],
+    ["Shoo, crab! The crab dashes back to the sea.", "beach; E 140 y238 point; hops 310 y242; crab 310 y242"],
+    ["Emerson makes a wish on her shell.", "beach; E 200 y238 hold:shell hs:.8 mood:sleep; q 255 y120 t:✨"],
+    ["She wishes to see a fish. Splash! A fish jumps up!", "beach; E 100 y238 wow; fish 220 y150 s1.6; splash 220 y175"],
+    ["Dad has a dish of shells. Mom has a bunch, too.", "beach; D 110 y238; bowl 200 y242 empty #4fb3e8; shell 188 y224; shell 210 y224 #fff; M 300 y238 hold:shell hs:.8"],
+    ["We take the shells home. What a fun day!", "beach; spark; shell 120 s2 y242; shell 200 s2 y242 #fff; shell 280 s2 y242 #ffcf33; E 345 y238 big"]
+  ] },
+  "7-2": { t: "Lunch", cover: 8, pages: [
+    ["It is time for lunch. We are hungry!", "kitchen; L 110 wow; O 200 wow; E 290 wow"],
+    ["Mom makes a sandwich. It has ham and cheese.", "kitchen; M 140; sandwich 270 y142 s1.6"],
+    ["Emerson has a peach. Munch, munch!", "kitchen; E 200 eat hold:peach big"],
+    ["Olivia has chips. Crunch, crunch!", "kitchen; O 200 eat hold:chips"],
+    ["Lauren has a bunch of grapes. She shares them.", "kitchen; L 160 hold:grapes hs:.7; E 270 big"],
+    ["Dad has a big lunch. He has three sandwiches!", "kitchen; D 180 big; sandwich 270 y142; sandwich 305 y142; sandwich 340 y142"],
+    ["Then we have a treat. It is cherry pie!", "kitchen; pie 200 y142 s2.2; cherry 260 y142 s1.2"],
+    ["Chomp! Emerson has pie on her chin!", "kitchen; E 200 eat hold:pie big s1.2"],
+    ["Dexter and Leo watch. They wish for lunch, too.", "kitchen; dexter 140 s1.6 y228; leo 260 s1.6 y228"],
+    ["Mom gives them fish. Munch, munch, munch!", "kitchen; dexter 140 s1.4; bowl 200 empty y232 #e5484d; fish 200 y216 s.8; leo 260 s1.4"],
+    ["We are full. That was the best lunch!", "kitchen; spark; L 60; E 345 big up; table 200 #ffd1e0; sandwich 150 y163; pie 200 y163; chips 250 y163"]
+  ] },
+  "7-3": { t: "Bath Time", cover: 2, pages: [
+    ["It is bath time! Emerson gets in the tub.", "bath; E 200 y200 big; tub 200 s1.2"],
+    ["The tub has lots of bubbles. Splash!", "bath; E 200 y200 big up; tub 200 s1.2; splash 200 y140"],
+    ["Emerson has a duck. It is a rubber duck.", "bath; E 170 y200; tub 200 s1.2; duck 245 y152 s1.2"],
+    ["Quack, quack! The duck can swim.", "bath; duck 200 s3 y200; q 290 y80 t:Quack!"],
+    ["Mom helps wash her hair. Shut your eyes!", "bath; E 190 y200 mood:sleep; tub 190 s1.2; M 330"],
+    ["Then Emerson splashes Mom! Splash, splash!", "bath; E 190 y200 big up; tub 190 s1.2; M 330 wow; splash 280 y120"],
+    ["Mom is wet! Mom laughs and laughs.", "bath; E 190 y200 big; tub 190 s1.2; M 330 big"],
+    ["Dexter peeks in. He does not want a bath!", "bath; E 160 y200; tub 160 s1.2; dexter 330 s1.6 grumpy"],
+    ["Emerson gets out. She has a fluffy white towel.", "bath; E 200 #ffffff big s1.2"],
+    ["She brushes her teeth. Brush, brush, brush!", "bath; E 200 eat hold:brush hc:#4fb3e8 hs:.5"],
+    ["Now she is fresh and ready for bed.", "bedroom night; bed 200 #ff8fb3 who:E"]
+  ] },
+  "7-4": { t: "The Chicks", cover: 4, pages: [
+    ["Grandpa Mark has a hen. She sits on eggs.", "farm; hen 200 s2"],
+    ["Each day, we check on the eggs.", "farm; Mark 110; E 200; hen 300 s1.4"],
+    ["Then, crack! An egg hatches!", "farm; egg 160 s2 y230; egg 200 s2 y230; egg 240 s2 y230; q 200 y110 t:Crack!"],
+    ["Look! It is a chick! Cheep, cheep!", "farm; chick 200 s3 y230"],
+    ["Then more chicks hatch. One, two, three, four!", "farm; chick 110 s2 y230; chick 170 s2 y230; chick 230 s2 y230; chick 290 s2 y230"],
+    ["The chicks are fuzzy. They are yellow.", "farm; chick 200 s4.4 y230"],
+    ["Emerson can hold a chick. She is so gentle.", "farm; E 200 hold:chick hs:.8 big s1.2"],
+    ["The chicks chase the hen. Cheep, cheep, cheep!", "farm; chick 120 s1.4; chick 160 s1.4; chick 200 s1.4; chick 240 s1.4; hen 310 s1.4"],
+    ["The hen tucks them under her wing.", "farm; hen 200 s2.4; chick 165 s1.4 y216; chick 235 s1.4 y216"],
+    ["Grandpa Mark said, “Thanks for checking!”", "farm; Mark 150 big; E 250 big; chick 330 s1.4"]
+  ] },
+  "7-5": { t: "Thick and Thin", cover: 7, pages: [
+    ["Grandma Becky has lots of books at the library.", "library; Becky 200 wave"],
+    ["This book is thick. That book is thin.", "library; books 130 s2.6; bk 270 s2.2 #e5484d"],
+    ["Emerson thinks. Which book will she pick?", "library; E 200 wow; q 260 y90"],
+    ["She picks the thin book with a fish on it.", "library; E 200 hold:bk hc:#4fb3e8 hs:.8 big"],
+    ["Lauren picks the thick book. It has lots of chapters.", "library; L 200 hold:books hs:.8"],
+    ["Olivia picks a book with a ball on it.", "library; O 200 hold:bk hc:#f08a24 hs:.8"],
+    ["Then we sit with Grandma Becky. She reads to us.", "library; mat 200 s3.6 #e8c27a; L 90 sit; E 150 sit; Becky 210 sit book bc:#2eb67d; O 290 sit"],
+    ["Shh! We do not yell. We whisper.", "library; E 200 wow; q 260 y90 t:Shh!"],
+    ["Emerson reads the thin book. Then, The End!", "library; Becky 140 sit big; E 250 sit book bc:#4fb3e8 big"],
+    ["Grandma Becky said, “What a reader!”", "library; spark; Becky 150 big; E 250 up big"]
+  ] },
+  "7-6": { t: "Which Doll?", cover: 10, pages: [
+    ["Emerson has three dolls. Which one will she pick?", "bedroom; E 110; doll 210 y230 #e5484d h:#f7d35f; doll 260 y230 #fff h:#333; doll 310 y230 #9b6bff h:#c0582f"],
+    ["The doll in white? The doll in red? The doll in purple?", "bedroom; doll 110 s2.4 y230 #fff h:#333; doll 200 s2.4 y230 #e5484d h:#f7d35f; doll 290 s2.4 y230 #9b6bff h:#c0582f"],
+    ["She picks the doll in red. It has blond hair, just like her.", "bedroom; E 200 hold:doll hc:#e5484d hh:#f7d35f hs:.9 big"],
+    ["Olivia wants to play. Which doll will she pick?", "bedroom; O 200 wow; q 260 y90"],
+    ["She picks the doll in white. It has black hair.", "bedroom; O 200 hold:doll hc:#fff hh:#333 hs:.9"],
+    ["Lauren picks the doll in purple.", "bedroom; L 200 hold:doll hc:#9b6bff hh:#c0582f hs:.9"],
+    ["Where will the dolls go? To a fancy lunch!", "bedroom; doll 150 y230 #e5484d h:#f7d35f; doll 250 y230 #fff h:#333; table 200 s.7 #ff8fb3; cupcake 200 y178 s.6"],
+    ["When it is time to go, the dolls rush back.", "bedroom; hops 300 y230; doll 300 y230 #9b6bff h:#c0582f; doll 140 y230 #e5484d h:#f7d35f; doll 200 y230 #fff h:#333"],
+    ["Who wants a nap? The dolls do!", "bedroom; box 200 s2.4; doll 165 y143 #e5484d h:#f7d35f; doll 200 y143 #fff h:#333; doll 235 y143 #9b6bff h:#c0582f; q 290 y80 t:Z_z #6b7bd6"],
+    ["What a fun day with my sisters!", "bedroom; spark; L 110 hold:doll hc:#9b6bff hh:#c0582f hs:.9; O 200 hold:doll hc:#fff hh:#333 hs:.9; E 290 hold:doll hc:#e5484d hh:#f7d35f hs:.9 big"]
+  ] },
+  "7-7": { t: "Quack, Quack", cover: 3, pages: [
+    ["Grandpa Mark has ducks at his pond.", "pond; Mark 80; duck 160 y230; duck 240 y232; duck 310 y228 #fff"],
+    ["This duck is white. That duck is black.", "pond; duck 130 s2 y236 #fff; duck 270 s2 y236 #333"],
+    ["The ducks quack and quack. Quack, quack, quack!", "pond; duck 150 s1.6 y236; duck 250 s1.6 y236 #fff; q 200 y100 t:Quack!"],
+    ["Emerson has a sack of duck snacks.", "pond; E 200 hold:bag hc:#c9965a hs:.8"],
+    ["She tosses a snack. The ducks peck, peck, peck!", "pond; E 110; duck 220 y234; duck 280 y234 #fff; duck 335 y234"],
+    ["The ducks swim back. They want more!", "pond; duck 130 y234; duck 200 y234 #fff; duck 260 y234; E 340"],
+    ["One duck chases Emerson! Quack!", "pond; E 160 run wow; duck 270 s1.4 y230"],
+    ["Emerson runs back to Grandpa Mark. She giggles.", "pond; Mark 120; E 200 big; duck 310 y232"],
+    ["The ducks swim off. Splash, splash.", "pond; duck 150 y238; duck 230 y238 #fff; splash 190 y234"],
+    ["Back to the house! Bye, ducks!", "farm; Mark 160 wave; E 250 wave big"]
+  ] },
+  "7-8": { t: "Shoot, Olivia!", cover: 8, pages: [
+    ["Olivia is at practice. She wants to shoot well.", "court; O 200 hold:bball hs:.8 #e5484d s1.2"],
+    ["She bounces the ball. Thump, thump, thump.", "court; O 200 #e5484d; bball 225 y215; q 280 y120 t:Thump!"],
+    ["She shoots. Swish! It is in!", "court; hoop 300; bball 300 y96; O 150 up big #e5484d"],
+    ["She shoots again. Clunk! It hits the rim.", "court; hoop 300; bball 330 y68; O 150 wow #e5484d"],
+    ["Olivia is not sad. She tries and tries.", "court; O 200 big #e5484d hold:bball hs:.8"],
+    ["Emerson comes to watch. She cheers, “You can do it!”", "court; E 200 up big"],
+    ["Olivia shows Emerson how to shoot.", "court; O 140 point #e5484d; E 250 hold:bball hs:.8"],
+    ["Emerson shoots! Swish! She is so happy.", "court; spark; hoop 300; bball 300 y96; O 80 up big #e5484d; E 170 up big"],
+    ["The two sisters slap hands. Smack!", "court; O 170 up big #e5484d; E 240 up big; q 205 y60 t:Smack!"],
+    ["Olivia and Emerson will practice each day.", "court; spark; hoop 330; O 120 hold:bball hs:.8 #e5484d; E 220 big"]
+  ] },
+  "7-9": { t: "Brush, Brush", cover: 7, pages: [
+    ["Three sisters. Three heads of blond hair!", "room; L 110; O 200; E 290 big"],
+    ["Lauren brushes her hair. Brush, brush, brush.", "room; L 200 hold:brush hs:.6"],
+    ["Her hair is long and it shines.", "room; spark; L 200 big s1.2"],
+    ["Olivia brushes her hair. Then she makes a ponytail.", "room; O 200 hold:brush hs:.6"],
+    ["Emerson can not brush her hair. It is a big tangle!", "room; E 200 sad s1.3"],
+    ["Lauren helps. She brushes Emerson's hair. Ouch!", "room; L 140 hold:brush hs:.6; E 240 wow"],
+    ["Then Lauren makes two pigtails. Each has a pink tie.", "room; E 200 big s1.5"],
+    ["Emerson checks the mirror. She likes it!", "room; E 200 big up s1.3"],
+    ["Then the sisters brush Dexter. He purrs and purrs.", "room; L 110 hold:brush hs:.6; dexter 200 s1.6; heart 200 y110; O 300"],
+    ["Three sisters and a cat. What a bunch!", "room; spark; L 100; O 180; E 260 big; dexter 330 s1.2"]
+  ] },
+  "7-10": { t: "A Bunch of Fruit", cover: 2, pages: [
+    ["Mom and Emerson go to the farm stand.", "out; stand 180 t:Fruit; M 320; E 370 big"],
+    ["Which fruit will we get? There is so much!", "out; stand 200 t:Fruit; peach 150 y165; apple 180 y165; grapes 215 y165; cherry 250 y165"],
+    ["We get a bunch of cherries. They are sweet.", "out; E 200 hold:cherry big s1.2"],
+    ["We get peaches. They are fuzzy.", "out; M 200 hold:peach"],
+    ["We get a big watermelon. It is so heavy!", "out; M 160 wow; wmelon 280 s2 y230"],
+    ["At home, Mom washes the fruit in the sink.", "kitchen; M 160; bowl 280 y142 s1.3 #4fb3e8"],
+    ["Emerson munches a peach. Juice drips on her chin!", "kitchen; E 200 eat hold:peach big"],
+    ["Olivia and Lauren munch cherries. They spit the pits!", "kitchen; O 140 eat hold:cherry; L 260 eat hold:cherry"],
+    ["Dad chops the watermelon. Chop, chop, chop!", "kitchen; D 150; melon 250 y142; melon 290 y142"],
+    ["Then we have a fruit lunch. Crunch, munch, yum!", "kitchen; spark; O 60; E 345 big up; table 200 #ffd1e0; melon 150 y163; peach 190 y163; cherry 220 y163; bowl 255 y163"]
+  ] }
+});

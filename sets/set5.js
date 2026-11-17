@@ -1,0 +1,128 @@
+/* SET 5 (PURPLE): ending sounds -nd, -st, -mp, -ng, -nk, plus went, will, what, want */
+Object.assign(BOOKS, {
+  "5-1": { t: "Sand and Sun", cover: 5, pages: [
+    ["We went to the beach. The sand is hot!", "beach; sun 330 y50; L 100 y238; O 180 y238; E 260 y238 wow"],
+    ["Emerson has sand on her hands. She has sand on her legs!", "beach; E 200 y238 up big s1.2"],
+    ["Lauren and Emerson want to make a sand castle.", "beach; L 140 y238; E 220 y238 big; pail 300 y242"],
+    ["Fill the pail with sand. Pat it. Flip it!", "beach; E 170 y238 sit; pail 250 y242 s1.4"],
+    ["It stands up. It is a castle!", "beach; spark; castle 200 s2 y240"],
+    ["Olivia sets a flag on top. It is the best castle!", "beach; castle 180 s2 y240; O 310 y238 point big"],
+    ["Dad digs a pond next to it.", "beach; castle 150 s1.6 y240; puddle 240 y242; D 320 hold:shovel hs:.7 y238"],
+    ["Then a big wave! Splash!", "beach; castle 200 s2 y240; splash 200 y190 s2.4; q 300 y80 t:!"],
+    ["The castle is gone. It is just sand.", "beach; L 120 y238 sad; O 200 y238 sad; E 280 y238 sad"],
+    ["We can make it again! We will make the best one yet.", "beach; castle 120 s1.4 y240; E 200 y238 big up; castle 280 s1.6 y240"],
+    ["What a fun day in the sand!", "beach; spark; L 60 y238; O 120 y238; castle 200 s1.8 y240; E 290 y238 big; D 355 y238"]
+  ] },
+  "5-2": { t: "Camp in the Tent", cover: 6, pages: [
+    ["Grandma Lynette has a big tent. We will camp!", "woods; Lyn 110 big; tent 270 s1.6"],
+    ["Lauren and Olivia help. The tent stands up!", "woods; L 80 big; tent 200 s1.6; O 330 big"],
+    ["Emerson gets the lamp. She lifts it up.", "woods; E 200 up hold:lamp hs:.8 big"],
+    ["The sun went down. We camp at night.", "woods night; tent 200 s1.6; lamp 300 y232"],
+    ["Grandma Lynette has a fire. It is so hot!", "woods night; Lyn 90 sit; fire 210 y232 s1.4"],
+    ["We sit by the fire. We sing a camp song.", "woods night; fire 200 y234; Lyn 70 sit; L 130 sit; O 270 sit; E 330 sit big; q 200 y110 t:♪ #ffcf33"],
+    ["Grandma has a snack on a stick. Yum!", "woods night; fire 200 y234; Lyn 120 hold:cookie hs:.6 big; E 290 eat hold:cookie big"],
+    ["Bump! What is that? It is a frog!", "woods night; E 160 wow; frog 300 s1.6 y236; q 230 y110"],
+    ["The frog hops past the tent. Hop, hop!", "woods night; tent 150 s1.4; hops 320 y232; frog 320 s1.2 y228"],
+    ["We get in the tent. It is snug.", "woods night; tent 200 s1.8; lamp 300 y232"],
+    ["We will camp again. Grandma Camp is the best!", "woods night; spark seed:3; tent 140 s1.6; Lyn 260 big; E 330 big up"]
+  ] },
+  "5-3": { t: "The Best Nest", cover: 7, pages: [
+    ["Grandpa Lon has a big tree in his garden.", "garden; tree 190 s1.5; Lon 320"],
+    ["Look up! A bird has a nest in the tree.", "garden; tree 200 s1.5; nest 220 y110; bird 192 y108"],
+    ["The nest has three eggs. They are blue.", "garden; nest 200 s4 y200 n:3"],
+    ["The bird sits on the nest. She must rest.", "garden; nest 200 s3.4 y205 n:3; bird 200 s2.6 y170"],
+    ["Emerson and Grandpa Lon sit still. They do not bump the tree.", "garden; tree 200 s1.5; nest 220 y110; bird 214 y106; Lon 80 sit; E 330 sit"],
+    ["Then, crack! An egg has a crack.", "garden; nest 200 s4 y200 n:3; q 300 y80 t:Crack!"],
+    ["Look! A chick! Then two! Then three!", "garden; nest 200 s4 y215 n:0; chick 165 y172 s1.5; chick 200 y168 s1.5; chick 235 y172 s1.5"],
+    ["The chicks want a snack. Cheep, cheep!", "garden; nest 200 s4 y215 n:0; chick 165 y172 s1.5; chick 200 y168 s1.5; chick 235 y172 s1.5; q 300 y80 t:Cheep!"],
+    ["The bird brings a bug. Gulp! Gulp!", "garden; nest 200 s4 y215 n:0; chick 175 y172 s1.5; chick 225 y172 s1.5; bird 290 s2 y150; bug 312 y128 s.6"],
+    ["Grandpa Lon said, “It is the best nest.”", "garden; tree 200 s1.5; nest 220 y110; Lon 110 point big; E 310 big"],
+    ["The chicks will grow. Then they will flap and go!", "garden; bird 120 y90 #ffe14d; bird 200 y64; bird 280 y90 #ffe14d; Lon 120 wave; E 290 wave big"]
+  ] },
+  "5-4": { t: "Sing a Song", cover: 8, pages: [
+    ["Grandma Lynette can sing. She sings a long song.", "room; Lyn 200 big; q 270 y80 t:♪"],
+    ["Lauren can sing. She sings a song, too.", "room; L 200 big; q 270 y90 t:♪"],
+    ["Olivia has a drum. Bang, bang, bang!", "room; O 170 big; drum 260 s1.5"],
+    ["Emerson has a bell. Ring, ring, ring!", "room; E 200 hold:bell hs:.8 big"],
+    ["Dexter sings, “Mew!” Leo sings, “Mew, mew!”", "room; dexter 150 s1.6; leo 260 s1.6; q 205 y90 t:♪"],
+    ["We are a band! We sing, bang, and ring.", "room; Lyn 60 big; L 130 big; O 200; drum 245 s1.1; E 320 hold:bell hs:.8 big"],
+    ["Mom and Dad come in. They want to sing, too!", "room; M 110 big; D 290 big; q 200 y80 t:♪"],
+    ["We all sing. We sing so long!", "room; D 50 big; M 110 big; Lyn 170 big; L 230 big; O 290 big; E 350 big; q 200 y50 t:♪_♪"],
+    ["Then the song ends. We clap and clap.", "room; spark; D 50 up; M 110 up; Lyn 170 up; L 230 up; O 290 up; E 350 up big"],
+    ["Grandma Lynette hugs us. That was the best song!", "room; heart 200 y60; L 110; Lyn 200 hug big; E 290 big"]
+  ] },
+  "5-5": { t: "Pink Drink", cover: 9, pages: [
+    ["It is hot. We want a drink.", "out; sun 330 y50 face; L 120 sad; O 200 sad; E 280 sad"],
+    ["Lauren has a plan. “Let's make a pink drink!”", "out; L 200 point big"],
+    ["We get lemons and a big jug.", "kitchen; lemon 150 y142 s1.4; lemon 200 y142 s1.4; drink 260 y142 s1.8 #fff8d0"],
+    ["We mix and mix. Now it is pink!", "kitchen; E 110 big; drink 220 y142 s2 #ff8fb3; O 320"],
+    ["Then we set up a stand.", "out; stand 200 t:Pink_Drink"],
+    ["Dad wants a pink drink. He hands us a coin.", "out; stand 180 t:Pink_Drink; D 340 hold:drink"],
+    ["Grandpa Mark wants a drink. Grandma Becky wants one, too.", "out; stand 150 t:Pink_Drink; Mark 290; Becky 355"],
+    ["We sell and sell. The jug is empty!", "out; L 140; O 200; E 260 big; stand 200 t:Pink_Drink"],
+    ["We think we did well! We have a lot of cash.", "out; spark; stand 200 t:Pink_Drink; E 330 up big"],
+    ["We drink the last pink drink. Yum!", "out; L 120 hold:drink; O 200 hold:drink; E 280 eat hold:drink big"]
+  ] },
+  "5-6": { t: "Jump, Emerson, Jump!", cover: 8, pages: [
+    ["Grandma Lynette has a jump rope. It is long and pink.", "out; Lyn 160 big; rope 270 s1.2"],
+    ["Emerson can jump. Jump, jump, jump!", "out; E 200 hop l20 s1.2; rope 200 s1.3"],
+    ["She did ten jumps. Then, bump! She trips.", "out; E 200 sit sad"],
+    ["Emerson is sad. Grandma Lynette helps.", "out; Lyn 140 hug; E 240 sad"],
+    ["“Try it again. You can do it!”", "out; Lyn 140 point big; E 240"],
+    ["Emerson jumps. Jump, jump, jump, jump!", "out; E 200 hop l26 s1.2 big; rope 200 s1.3"],
+    ["Lauren and Olivia hold the rope. Emerson jumps in the middle.", "out; L 80 hold; O 320 hold flip; E 200 hop big"],
+    ["Emerson jumps and jumps. She did not trip!", "out; spark; E 200 hop l30 big s1.2; rope 200 s1.3"],
+    ["Grandma Lynette jumps, too! Jump, Grandma, jump!", "out; Lyn 200 hop big; rope 200 s1.6; E 330 up big"],
+    ["We all jump. Then we rest on the grass.", "out; L 100 sit; O 170 sit; E 240 sit big; Lyn 320 sit"]
+  ] },
+  "5-7": { t: "Emerson Is Six!", cover: 3, pages: [
+    ["It is a big day. Emerson is six!", "party; spark; E 200 up big s1.3"],
+    ["Mom has a cake with six candles on top.", "party; M 130; table 260 #ff8fb3; cake 260 y163 n:6"],
+    ["We sing to Emerson. She makes a wish.", "party; L 90 big; E 200 wow; O 310 big; table 200 #ff8fb3; cake 200 y163 n:6; q 270 y70 t:♪"],
+    ["Emerson blows. Puff! The candles are out.", "party; E 200 wow; table 200 #ff8fb3; cake 200 y163"],
+    ["Grandpa Mark and Grandma Becky have a gift. It is big!", "party; Mark 110 nohat; Becky 190; gift 300 s2.2 #9b6bff"],
+    ["Emerson rips it. It is a gym mat!", "party; E 150 big up; mat 280 s1.8 #ff6fae"],
+    ["Grandpa Lon and Grandma Lynette have a gift, too.", "party; Lon 110 nohat; Lyn 190; gift 300 s1.8 #2eb67d"],
+    ["It is a doll with blond hair, just like Emerson!", "party; E 200 hold:doll hc:#ff6fae hh:#f7d35f hs:.9 big s1.2"],
+    ["Olivia and Lauren have a gift. It is a pink ball!", "party; O 110; L 190; E 290 hold:ball hc:#ff6fae hs:.8 big"],
+    ["Dexter and Leo jump in the box. That is their gift!", "party; dexter 175 s1.1 y186; leo 225 s1.1 y186; box 200 s2.2"],
+    ["Emerson hugs them all. Six is the best!", "party; spark; D 50; M 110; L 170; O 230; E 290 big up; heart 290 y60"]
+  ] },
+  "5-8": { t: "The Big Race", cover: 9, pages: [
+    ["Grandma Lynette said, “Let's have a race!”", "out; Lyn 200 big point"],
+    ["Lauren, Olivia, and Emerson stand in a line.", "out; L 120; O 200; E 280 big"],
+    ["Ready, set, go! They run fast.", "out; L 120 run; O 210 run; E 300 run big"],
+    ["Lauren is fast. Olivia is fast.", "out; O 170 run; L 260 run"],
+    ["Emerson is last. She must run fast!", "out; E 120 run wow; O 270 run; L 340 run"],
+    ["Then, bump! Lauren trips on a log.", "out; log 230 s1.4; L 270 sit sad; O 340 run"],
+    ["Emerson stops to help. She lends a hand.", "out; E 170 point; L 250 sit sad"],
+    ["Olivia stops and runs back, too.", "out; E 140; L 220 sit; O 310 run flip"],
+    ["They get up. They hold hands and run.", "out; L 120 run; O 200 run; E 280 run big"],
+    ["They get to the end at the same time!", "out; spark; L 120 up big; O 200 up big; E 280 up big; flag 350 #e5484d"],
+    ["Grandma Lynette said, “You are all the best!”", "out; L 70 hold:medal hs:.8; Lyn 160 big; O 250 hold:medal hs:.8; E 330 hold:medal hs:.8 big"]
+  ] },
+  "5-9": { t: "Fish in the Pond", cover: 7, pages: [
+    ["Grandpa Mark has a pond on his farm.", "pond; Mark 200 wave"],
+    ["We went to fish with him. Lauren has a rod.", "pond; L 130 hold:rod hs:.9; Mark 260 hold:rod hs:.9"],
+    ["Emerson has a rod, too. She must sit still.", "pond; E 180 sit hold:rod hs:.9"],
+    ["We wait and wait. Not one fish yet!", "pond; Mark 90 sit hold:rod hs:.9; L 190 sit hold:rod hs:.9; E 280 sit hold:rod hs:.9 sad"],
+    ["Then, tug! Emerson has a fish!", "pond; E 170 hold:rod hs:.9 wow; fish 270 y212 s1.4; splash 270 y224"],
+    ["It is a big fish! It flips and flops.", "pond; fish 200 s3 y180"],
+    ["Grandpa Mark helps her lift it up.", "pond; Mark 140 big; E 250 up hold:fish hs:.8 big"],
+    ["Emerson is so glad. Then she lets it go. Splash!", "pond; E 170 big wave; splash 260 y228 s1.4"],
+    ["Lauren gets a fish. Then Grandpa Mark gets one.", "pond; L 140 hold:fish hs:.8 big; Mark 270 hold:fish hs:.8 big"],
+    ["Fishing on the farm is the best!", "pond; spark; Mark 110 big; L 200; E 290 big up hold:rod hs:.9"]
+  ] },
+  "5-10": { t: "Olivia's Big Game", cover: 6, pages: [
+    ["Olivia has a big game. She is on a team.", "court; O 200 #e5484d hold:bball hs:.8 s1.2"],
+    ["We went to the gym to see her.", "court; M 70; D 150; L 240; E 320 big"],
+    ["Olivia must run fast. She must jump and toss.", "court; O 180 run #e5484d; bball 240 y205"],
+    ["She gets the ball. She runs to the net.", "court; hoop 320; O 180 run #e5484d hold:bball hs:.8"],
+    ["Olivia jumps and tosses it. Will it sink?", "court; hoop 300; O 150 up #e5484d; bball 240 y105; q 200 y60"],
+    ["Swish! It sinks! Two points!", "court; spark; hoop 300; bball 300 y96; O 150 up big #e5484d"],
+    ["We stand and yell, “Go, Olivia!”", "court; M 70 up big; D 150 up big; L 230 up big; E 310 up big"],
+    ["Olivia gets the ball. It is the last shot!", "court; hoop 320; O 180 up #e5484d hold:bball hs:.8 wow"],
+    ["Bank it in! Yes! Her team wins!", "court; spark; hoop 300; bball 300 y96; O 160 up big #e5484d"],
+    ["Olivia gets a big hug. She is the best!", "court; heart 200 y60; L 110; O 200 hug big #e5484d; E 285 up big"]
+  ] }
+});
