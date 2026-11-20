@@ -14,7 +14,17 @@ var SETS = [
   { n: 7, name: "Pink", c: "#ec4899", focus: "sh, ch, th, wh, and ck" },
   { n: 8, name: "Teal", c: "#14b8a6", focus: "Silent e: cake, bike, home, cute" },
   { n: 9, name: "Brown", c: "#a0632d", focus: "Vowel teams: rain, sheep, boat, moon, read" },
-  { n: 10, name: "Rainbow", c: "#7c3aed", bg: "linear-gradient(135deg,#e5484d,#f97316,#e0a800,#2eb67d,#3b82f6,#8b5cf6)", focus: "Bossy r (car, bird, corn) and longer stories" }
+  { n: 10, name: "Rainbow", c: "#7c3aed", bg: "linear-gradient(135deg,#e5484d,#f97316,#e0a800,#2eb67d,#3b82f6,#8b5cf6)", focus: "Bossy r (car, bird, corn) and longer stories" },
+  { n: 11, name: "Red Stripes", c: "#e5484d", bg: "repeating-linear-gradient(45deg,#e5484d 0 12px,#f2777b 12px 24px)", focus: "Review of Sets 1-10 with longer sentences" },
+  { n: 12, name: "Green Dots", c: "#2eb67d", bg: "radial-gradient(circle,rgba(255,255,255,.4) 0 4px,transparent 5px) 0 0/20px 20px,#2eb67d", focus: "Endings -ing and -ed (jumping, jumped)" },
+  { n: 13, name: "Blue Checks", c: "#3b82f6", bg: "repeating-conic-gradient(#3b82f6 0 25%,#6aa1f9 0 50%) 0 0/28px 28px", focus: "Vowel teams ou, ow, oi, oy, au, aw" },
+  { n: 14, name: "Orange Plaid", c: "#f97316", bg: "repeating-linear-gradient(0deg,rgba(255,255,255,.2) 0 6px,transparent 6px 22px),repeating-linear-gradient(90deg,rgba(255,255,255,.2) 0 6px,transparent 6px 22px),#f97316", focus: "Two-syllable words (picnic, basket, rabbit)" },
+  { n: 15, name: "Purple Polka Dots", c: "#8b5cf6", bg: "radial-gradient(circle,rgba(255,255,255,.35) 0 7px,transparent 8px) 0 0/30px 30px,#8b5cf6", focus: "Soft c and g, -dge and -tch (ice, giant, fudge, catch)" },
+  { n: 16, name: "Yellow Stripes", c: "#e0a800", bg: "repeating-linear-gradient(0deg,#e0a800 0 12px,#f2c230 12px 24px)", focus: "Plurals and -er, -est (bigger, biggest)" },
+  { n: 17, name: "Pink Zebra", c: "#ec4899", bg: "repeating-linear-gradient(-45deg,#ec4899 0 14px,#1f1f1f 14px 19px,#ffffff 19px 23px,#1f1f1f 23px 28px)", focus: "Tricky words: because, friend, again, laugh, would, could" },
+  { n: 18, name: "Teal Checks", c: "#14b8a6", bg: "repeating-conic-gradient(#14b8a6 0 25%,#3fd0bf 0 50%) 0 0/20px 20px", focus: "Contractions (can't, it's, I'm, we're)" },
+  { n: 19, name: "Brown Plaid", c: "#a0632d", bg: "repeating-linear-gradient(0deg,rgba(255,255,255,.18) 0 5px,transparent 5px 20px),repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 5px,transparent 5px 20px),#a0632d", focus: "Chapter books with three short chapters" },
+  { n: 20, name: "Rainbow Stripes", c: "#7c3aed", bg: "repeating-linear-gradient(90deg,#e5484d 0 20px,#f97316 20px 40px,#e0a800 40px 60px,#2eb67d 60px 80px,#3b82f6 80px 100px,#8b5cf6 100px 120px)", focus: "Big finale stories" }
 ];
 
 var BOOKS = {

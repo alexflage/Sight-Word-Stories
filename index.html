@@ -34,7 +34,7 @@ h2{margin:6px 0}
 .next .nc{width:120px;flex:none;border-radius:10px;overflow:hidden}.next .nc svg{display:block;width:100%;height:auto}
 .next b{font-size:1.3rem;display:block}
 .sets{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:14px}
-.set{position:relative;display:flex;flex-direction:column;gap:4px;padding:16px;border-radius:22px;background:var(--sb,var(--c));color:#fff;min-height:150px;box-shadow:0 6px 0 rgba(0,0,0,.18);transition:transform .12s;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.set{position:relative;display:flex;flex-direction:column;gap:4px;padding:16px;border-radius:22px;background:var(--sb,var(--c));color:#fff;min-height:150px;box-shadow:0 6px 0 rgba(0,0,0,.18);transition:transform .12s;text-shadow:0 1px 2px rgba(0,0,0,.6),0 0 6px rgba(0,0,0,.45)}
 .set:active{transform:translateY(3px)}
 .set .num{font-size:3rem;font-weight:700;line-height:1}
 .set .lbl{font-weight:700;font-size:1.15rem}
@@ -87,6 +87,9 @@ h2{margin:6px 0}
 .wl{display:flex;flex-wrap:wrap;gap:1cqw;justify-content:center;font-size:2.9cqw;color:#6b6a8a}
 .wl .w{background:#f6efdc;border-radius:99px;padding:.2cqw 1.6cqw}
 .end{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.6cqw;padding:4cqw;text-align:center}
+.quiz{flex:1;display:flex;flex-direction:column;justify-content:center;padding:5cqw 7cqw;gap:2cqw;background:linear-gradient(#fffdf6,#fff4dc)}
+.quiz .qh{font-size:7cqw;font-weight:700;color:var(--c);text-align:center}
+.quiz ol{margin:0;padding-left:6cqw;font-size:4.6cqw;font-weight:700;line-height:1.35;display:flex;flex-direction:column;gap:2.4cqw}
 .end .te{font-size:12cqw;font-weight:700;color:var(--c)}
 .end .bs{font-size:8cqw;letter-spacing:1cqw;color:var(--star)}.end .bs .off{color:#eadfc4}
 .end button{font-size:4.2cqw;padding:2cqw 4cqw;border-radius:3cqw;color:#2b2a4c;background:#fff;border-color:#eadfc4}
@@ -126,6 +129,16 @@ textarea,input{font:inherit;width:100%;padding:10px;border-radius:12px;border:2p
 <script src="sets/set8.js"></script>
 <script src="sets/set9.js"></script>
 <script src="sets/set10.js"></script>
+<script src="sets/set11.js"></script>
+<script src="sets/set12.js"></script>
+<script src="sets/set13.js"></script>
+<script src="sets/set14.js"></script>
+<script src="sets/set15.js"></script>
+<script src="sets/set16.js"></script>
+<script src="sets/set17.js"></script>
+<script src="sets/set18.js"></script>
+<script src="sets/set19.js"></script>
+<script src="sets/set20.js"></script>
 <script>
 var KEY = "storyStars.v1", S = null, app = document.getElementById("app");
 var KID = "Emerson";
@@ -198,7 +211,7 @@ function bookWords(b) {
   b.pages.forEach(function (p) { p[0].split(/\s+/).forEach(function (w) { var raw = w.replace(/[^A-Za-z']/g, ""), k = raw.toLowerCase(); if (k && !seen[k]) { seen[k] = 1; out.push(raw === "I" || /^[A-Z][a-z]+$/.test(raw) && ["Emerson", "Olivia", "Lauren", "Mom", "Dad"].indexOf(raw) >= 0 ? raw : k); } }); });
   return out;
 }
-function fsFor(t) { var l = t.length; return l <= 14 ? "9.5cqw" : l <= 24 ? "8cqw" : l <= 36 ? "6.8cqw" : l <= 60 ? "5.6cqw" : l <= 85 ? "4.8cqw" : "4.3cqw"; }
+function fsFor(t) { var l = t.length; return l <= 14 ? "9.5cqw" : l <= 24 ? "8cqw" : l <= 36 ? "6.8cqw" : l <= 60 ? "5.6cqw" : l <= 85 ? "4.8cqw" : l <= 110 ? "4.3cqw" : l <= 140 ? "3.9cqw" : "3.5cqw"; }
 
 /* ---------- router ---------- */
 function route() {
@@ -247,20 +260,21 @@ function setView(n) {
 /* ---------- reader ---------- */
 function reader(id) {
   var parts = id.split("-"), sn = +parts[0], bn = +parts[1], st = setOf(sn), b = BOOKS[id];
-  var N = b.pages.length + 2, i = 0, busy = false;
+  var Q = b.q && b.q.length ? b.pages.length + 1 : -1, N = b.pages.length + 2 + (Q > 0 ? 1 : 0), i = 0, busy = false;
   app.innerHTML = '<div class="reader" style="' + setStyle(st) + '"><div class="rtop"><a class="btn small" href="#/set/' + sn + '" aria-label="Close book">✕</a><div class="rtt">' + esc(b.t) + '</div><button class="small" id="snd" aria-label="Sound">' + (S.mute ? "🔇" : "🔊") + '</button></div>' +
     '<div class="stage"><button class="arrow" id="prev" aria-label="Previous page">◀</button><div class="book" id="book"></div><button class="arrow" id="next" aria-label="Next page">▶</button></div>' +
     '<div class="prog"><i id="pb"></i></div></div>';
   var book = document.getElementById("book"), prevB = document.getElementById("prev"), nextB = document.getElementById("next");
 
   function pageHtml(k) {
-    if (k === 0) return '<div class="pic">' + ART.scene(coverScene(b)) + '</div><div class="cvt"><span class="cvset">Set ' + sn + ' · Book ' + bn + '</span><h2>' + wordsHtml(b.t) + '</h2><div class="wl">' + bookWords(b).map(function (w) { return '<span class="w" data-w="' + esc(clean(w)) + '">' + esc(w) + '</span>'; }).join("") + '</div></div>';
+    if (k === 0) return '<div class="pic">' + ART.scene(coverScene(b)) + '</div><div class="cvt"><span class="cvset">Set ' + sn + ' · Book ' + bn + '</span><h2>' + wordsHtml(b.t) + '</h2>' + (bookWords(b).length <= 24 ? '<div class="wl">' : '<div class="wl" hidden>') + bookWords(b).map(function (w) { return '<span class="w" data-w="' + esc(clean(w)) + '">' + esc(w) + '</span>'; }).join("") + '</div></div>';
     if (k === N - 1) {
       var r = reads(id);
       return '<div class="end"><div class="te">The End</div><div class="bs" id="bs">' + starsHtml(Math.min(3, r)) + '</div>' +
         '<button class="big" id="iread">⭐ I read it!</button><p id="rmsg">' + (r ? 'Read ' + r + ' time' + (r > 1 ? 's' : '') + (r < 3 ? '. Read it again for another star!' : '. Super reader!') : 'Tap when you read the whole book!') + '</p>' +
         '<div class="row"><button id="again">↺ Again</button><button id="nbk">Next book ▶</button></div></div>';
     }
+    if (k === Q) return '<div class="quiz"><div class="qh">💭 Think and Talk</div><ol>' + b.q.map(function (q) { return '<li>' + wordsHtml(q) + '</li>'; }).join("") + '</ol></div>';
     var p = b.pages[k - 1];
     return '<div class="pic">' + ART.scene(p[1]) + '</div><div class="txt" style="--fs:' + fsFor(p[0]) + '">' + wordsHtml(p[0]) + '</div>' +
       '<span class="pno">' + k + '</span>';
